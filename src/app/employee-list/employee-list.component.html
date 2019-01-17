@@ -1,0 +1,27 @@
+<h1>NOSSOS EMPREGADOS</h1>
+<table>
+<thead>
+    <th>Nome</th>
+    <th>Salario</th>
+    <th>Bonus</th>
+</thead>
+<tbody>
+
+    <!--let i=index;" [id]="'tr'+i gera o id automatico   index variavel que ja existe do for -->
+    <tr *ngFor="let employee of employees_;let i=index;" [id]="'tr'+i">
+        <!--quando usado null o angula não aplica o css-->
+    <td [style.color]="employee.salary > 1000 ? 'yellow' : null" >{{employee.name}}</td>
+    <!-- css reativo direto no HTML-->
+    <td [style.color]="employee.salary > 1000 ? 'green' : 'blue'">{{employee.salary}}</td>
+    <td >{{employee.bonus}}</td>
+    <!--usando innerHtml  acessa diretamente o DOM-->
+<!--[ngClass]="{'salary-expansive': employee.salary > 1000 } (salary-expansive =  e uma classe css) -->
+  <!--   usado para aplicar diretamente uma classe css quando passa pela condição -->
+    <td [innerHtml]="employee.name" [ngClass]="{'salary-expensive': employee.salary > 1000 , 
+            'salary-cheap': employee.salary <= 1000 }"></td>
+    <td [style.color]="getSalaryColor(employee)" [innerHtml]="employee.salary"></td>
+    <td [innerHtml]="employee.bonus"></td>
+    
+</tr>
+</tbody>
+</table>
