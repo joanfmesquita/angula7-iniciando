@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import employees from '../employees';
+import { EmployeeService } from '../employee.service';
 @Component({
   selector: 'employee-list',
   templateUrl: './employee-list.component.html',
@@ -7,9 +8,9 @@ import employees from '../employees';
 })
 export class EmployeeListComponent implements OnInit {
  
-  employees_ = employees;
+ // employees_ = employees;
 
-  constructor() { }
+  constructor(public employeesService: EmployeeService) { }
 
   ngOnInit() {
   }
