@@ -8,7 +8,7 @@
 <tbody>
 
     <!--let i=index;" [id]="'tr'+i gera o id automatico   index variavel que ja existe do for -->
-    <tr *ngFor="let employee of employees_;let i=index;" [id]="'tr'+i">
+    <tr *ngFor="let employee of employeesService.employees;let i=index;" [id]="'tr'+i">
         <!--quando usado null o angula não aplica o css-->
     <td [style.color]="employee.salary > 1000 ? 'yellow' : null" >{{employee.name}}</td>
     <!-- css reativo direto no HTML-->

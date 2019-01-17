@@ -1,24 +1,24 @@
 <label>Nome</label>
-<input type="text" [(ngModel)]="name">
+<input type="text" [(ngModel)]="employee.name">
 <br>
 <label>Salario</label>
-<input type="text" [(ngModel)]="salary">
+<input type="text" [(ngModel)]="employee.salary">
 <br>
 <!-- ocultando a div caso o salario seja maior que R$ 1.000 destroi o elemento-->
-<div *ngIf="salary < 1000">
+<div *ngIf="employee.salary < 1000">
         <label>Bonus_ngIf   </label>
-        <input type="text" [(ngModel)]="bonus"> 
+        <input type="text" [(ngModel)]="employee.bonus"> 
     </div>
 
     <!-- ocultando a div caso o salario seja maior que R$ 1.000 não destroi o elemento esconde ele via css-->
-<div [hidden]="salary > 1000">
+<div [hidden]="employee.salary > 1000">
         <label>Bonus_hidden   </label>
-        <input type="text" [(ngModel)]="bonus"> 
+        <input type="text" [(ngModel)]="employee.bonus"> 
     </div>
 
 
 
-<button type="button" (click)="addEmployee($event)">Adicionar o empregado</button>
+<button type="button" (click)="addEmployee()">Adicionar o empregado</button>
 
 
 
