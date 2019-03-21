@@ -4,20 +4,6 @@
 <label>Salario</label>
 <input type="text" [(ngModel)]="employee.salary">
 <br>
-<!-- ocultando a div caso o salario seja maior que R$ 1.000 destroi o elemento-->
-<div *ngIf="employee.salary < 1000">
-        <label>Bonus_ngIf   </label>
-        <input type="text" [(ngModel)]="employee.bonus"> 
-    </div>
-
-    <!-- ocultando a div caso o salario seja maior que R$ 1.000 não destroi o elemento esconde ele via css-->
-<div [hidden]="employee.salary > 1000">
-        <label>Bonus_hidden   </label>
-        <input type="text" [(ngModel)]="employee.bonus"> 
-    </div>
-
-
-
 <button type="button" (click)="addEmployee()">Adicionar o empregado</button>
 
 
