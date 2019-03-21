@@ -25,7 +25,7 @@
                     <!--quando usado null o angula não aplica o css-->
                     <td [innerHtml]="employee.name"></td>
                     <td [innerHtml]="employee.salary | myCurrency" [SalaryColor]="employee.salary "></td>
-                    <td>{{employee.bonus}}</td>
+                    <td>{{employee.Bonus}}</td>
                     <td >
                         <a href="javascript:void(0)" (click)="openEditModal(employee)">Editar</a> |
                         <a href="javascript:void(0)" (click)="openDeleteModal(employee)">Destruir</a>
