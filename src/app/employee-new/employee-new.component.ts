@@ -25,6 +25,7 @@ employee: Employee = {
 addEmployee(event){
   const copy = Object.assign('target: {}',this.employee);
   this.employeesService.addEmployee(copy);
+ 
 }
 
   ngOnInit() {
